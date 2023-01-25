@@ -1,6 +1,9 @@
 # Assignment 2
 Breadth-first search
 
+# Breadth First Search Description:
+BFS is a search method where you first traverse all nodes in each layer of the graph before the next layer of the graph. It is different compared to DFS which will traverse until a leaf node first. BFS has a big O of O(|V| + |E|).
+
 # Assignment Overview
 The purpose of this assignment is to get you comfortable working with graph structures and to implement a breadth-first search function to traverse the graph and find the shortest path between nodes.
 
