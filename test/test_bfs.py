@@ -67,3 +67,5 @@ def test_bfs():
 
     assert len(bfs) == 2
     assert g.bfs('34930904', '34874009') is None
+    
+    
