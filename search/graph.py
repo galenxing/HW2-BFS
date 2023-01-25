@@ -21,8 +21,41 @@ class Graph:
         * If there is an end node input and a path does not exist, return None
 
         """
-        return
+        
+        # check graph is not empty
+        if nx.is_empty(self.graph):
+            raise Exception('Graph is empty')
+        
+        # check graph is not unconnected
+        if not nx.is_weakly_connected(self.graph):
+            return None
+        
+        # check start node is in graph
+        if not self.graph.has_node(start):
+            raise Exception(f'Graph does not have node {start}')
+        
+        # check end node is in graph
+        if (end != None) and not self.graph.has_node(end):
+            raise Exception(f'Graph does not have node {end}')
+        
+        
+        queue = []
+        visited = []
+        
+        queue.append(start)
+        visited.append(start)        
+        
+        while queue:
+            v = queue.pop(0)
+            neighbors = [n for n in self.graph.neighbors(v)]
+            for n in neighbors:
+                if n not in visited:
+                    visited.append(n)
+                    queue.append(n)
+                    if n == end:
+                        return visited
 
-
-
-
+        if (end != None) and (end not in visited):
+            return None
+       
+        return visited
