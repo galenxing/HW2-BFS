@@ -1,4 +1,4 @@
-! [BuildStatus] (https://github.com/galenxing/HW2-BFS/workflows/HW2-BFS/badge.svg?event=push)
+! [BuildStatus] (https://github.com/galenxing/HW2-BFS/workflows/ci.yml/badge.svg?event=push)
 
 # Assignment 2
 Breadth-first search
