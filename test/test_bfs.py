@@ -68,4 +68,11 @@ def test_bfs():
     assert len(bfs) == 2
     assert g.bfs('34930904', '34874009') is None
     
+    with pytest.raises(Exception):
+        g.bfs('asdfasdf')
+    
+    with pytest.raises(Exception):
+        assert g.bfs('34930904', 'asdfasdf')
+        
+
     
